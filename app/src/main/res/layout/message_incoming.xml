@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bubble_incoming"
+        tools:ignore="UselessParent">
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/senderAlias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-3dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="2dp"
+            android:layout_gravity="start"
+            android:text="@string/about"
+            android:textColor="@color/pureBlack"
+            android:textSize="12sp" />
+
+        <com.vanniktech.emoji.EmojiTextView
+            android:id="@+id/recvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-3dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="5dp"
+            android:maxWidth="290dp"
+            android:text="@string/type_hint"
+            android:textColor="@color/colorPrimary"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/recvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="1dp"
+            android:layout_gravity="end"
+            android:text="@string/alias"
+            android:textStyle="italic"
+            android:textColor="@color/pureBlack"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

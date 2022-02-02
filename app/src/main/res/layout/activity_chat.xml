@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slidingMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_bg"
+    tools:context=".chat.ChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/fcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatWidget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:fadeScrollbars="true"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="vertical"
+                android:layout_alignBottom="@id/inputSection"
+                android:layout_alignParentTop="true" />
+
+            <!-- android:layout_marginBottom="53dp" -->
+            <!-- android:layout_marginTop="3dp" -->
+            <LinearLayout
+                android:id="@+id/inputSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_entry"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/emojiButton"
+                        android:onClick="toggleEmojiKeyBoard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_gravity="bottom"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_emoji" />
+
+                    <com.vanniktech.emoji.EmojiEditText
+                        android:id="@+id/chatEntry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:minHeight="45dp"
+                        android:background="@null"
+                        android:hint="@string/type_hint"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:textColor="@color/pureBlack"
+                        android:textColorHint="@color/slightGrey"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/sendButton"
+                    android:onClick="onSend"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/send_bg"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_send_btn" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header">
+
+        <Button
+            android:id="@+id/logOutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="57dp"
+            android:background="@drawable/rounded_btn"
+            android:text="@string/log_out"
+            android:textColor="@color/mildRed"
+            android:textSize="20sp"
+            android:textAllCaps="true" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

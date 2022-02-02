@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Auth screen theme. -->
+    <style name="AuthTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!-- Splash screen theme. -->
+    <style name="SplashTheme" parent="AuthTheme">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+
+    <!-- Chat screen theme -->
+    <style name="ChatTheme" parent="AuthTheme">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <!-- About screen theme -->
+    <style name="AboutTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>

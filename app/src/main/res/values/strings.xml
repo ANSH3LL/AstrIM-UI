@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AstrIM</string>
+    <string name="existing_ac">EXISTING ACCOUNT</string>
+    <string name="new_ac">NEW ACCOUNT</string>
+    <string name="server_id">Server ID</string>
+    <string name="alias">Alias</string>
+    <string name="password">Password</string>
+    <string name="invite_code">Invite Code (Optional)</string>
+    <string name="sign_in">connect &amp; sign in</string>
+    <string name="sign_up">connect &amp; sign up</string>
+    <string name="sid_placeholder">srv.haloserver.io:10950</string>
+    <string name="al_placeholder">John Doe</string>
+    <string name="pas_placeholder">p4ssw0rd!</string>
+    <string name="iv_placeholder">BG7XV39S8O</string>
+    <string name="srv_info">Server Info</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="log_out">log out</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="type_hint">Type a message...</string>
+    <string name="vercode">AstrIM v1.0.0</string>
+    <string name="vername">Zima Blue</string>
+    <string name="verphrase">Love, Death &amp; Robots</string>
+</resources>
